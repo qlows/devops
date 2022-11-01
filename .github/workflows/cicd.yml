@@ -6,7 +6,7 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
   push:
-    branches: [ "dep-inclusions" ]
+    branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
 
@@ -49,5 +49,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.12.12 
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "comp3104-devops-101232721-exec" #Must be unique in Heroku
+          heroku_app_name: "spa-devops" #Must be unique in Heroku
           heroku_email: "umitkilincjr17@gmail.com"
